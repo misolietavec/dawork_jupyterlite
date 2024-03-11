@@ -3,7 +3,7 @@ import plotly.express as px
 import numpy as np
 
 # Zakladna frejma, vsetko pochadza z nej
-df = pd.read_parquet('data/nyc_taxi310k.parq')
+df = pd.read_parquet('data/nyc_taxi310k.parq', engine='fastparquet')
 df['pick_day'] = df['pick_dt'].dt.day
 df['pick_hour'] = df['pick_dt'].dt.hour
 
